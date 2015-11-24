@@ -45,6 +45,32 @@ h6 {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
+.header-container {
+	width: 100%;
+	height: 645px;
+	border-left: none;
+	border-right: none;
+	position: relative;
+	padding: 20px;
+}
+
+.video-container {
+	position:absolute;
+	left: 0%;
+	top: 0%;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+video{
+	position: absolute;
+	z-index: -1;
+	opacity: 0.78;	
+	width: 100%;
+	min-width: 1200px;
+}
+
 p {
     margin-bottom: 20px;
     font-size: 16px;
@@ -83,10 +109,11 @@ aside {
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
+	height: 120px;
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    text-transform: uppercase;
+  
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
     color: #428bca;
@@ -113,7 +140,7 @@ aside {
 .navbar-default .nav > li.active>a,
 .navbar-default .nav>li.active>a:focus {
     color: #428bca!important;
-    background-color: transparent;
+    background-color: #fff;
 }
 
 .navbar-default .nav > li.active>a:hover,
@@ -124,37 +151,60 @@ aside {
 @media(min-width:768px) {
     .navbar-default {
         border-color: rgba(255,255,255,.3);
-        background-color: transparent;
+		border-bottom: 1px solid gray;
+		
     }
+	
+	.navTitle{
+		font-size: 50px;
+		margin-top: 53px;
+		padding-left: 30px
+		
+	}
 
     .navbar-default .navbar-header .navbar-brand {
-        color: rgba(255,255,255,.7);
+        color: #428bca;
+		background-color: #fff;
+		
     }
 
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
-    }
+    
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
+        color: #222;
+		background-color: #fff;
+		margin-top: 65px;
+		
     }
 
-    .navbar-default .nav > li>a:hover,
-    .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
-    }
+    
 
     .navbar-default.affix {
         border-color: rgba(34,34,34,.05);
         background-color: #fff;
+		height: 30px;
     }
-
+	
+	.navbar-default.affix img {
+		width: 37px !important;
+		margin-top: 10px;
+		
+	}
+	
+	
+		
+	}
     .navbar-default.affix .navbar-header .navbar-brand {
-        font-size: 14px;
+       
         color: #428bca;
+		font-size: 14px;
+		margin-top: 0;
+		padding-left: 10px;
+		
     }
+	
+	
 
     .navbar-default.affix .navbar-header .navbar-brand:hover,
     .navbar-default.affix .navbar-header .navbar-brand:focus {
@@ -164,6 +214,7 @@ aside {
     .navbar-default.affix .nav > li>a,
     .navbar-default.affix .nav>li>a:focus {
         color: #222;
+		margin-top: 0 !important;
     }
 
     .navbar-default.affix .nav > li>a:hover,
