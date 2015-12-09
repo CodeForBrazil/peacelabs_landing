@@ -1,9 +1,9 @@
 <?php 
 
-if (isset($_GET['l']) && ($l = $_GET['l']) && file_exist('landingPeaceLabs_'.$l.'.html'))
+if (isset($_GET['en']) && file_exist('landingPeaceLabs_en.html'))
 {
 
-	include('landingPeaceLabs_'.$l.'.html');
+	include('landingPeaceLabs_en.html');
 
 }
 else
